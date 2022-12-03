@@ -27,13 +27,13 @@ Now the code can be copied out, pasted into your own HTML file, saved and the lo
 
 If you take a closer look at the HMTL file, you will find a post method. A post method sends data (interesting here: username and password) to a server.
 
-**Github-Abbildung 6**
+**index.html line 660**
 
 ![](images/action,method.png)
 
 So Facebook's original intention was to send this data to its servers in a file so that it can authenticate this user. However, the attacker doesn't want to authenticate anything, he just wants to send the credentials to his server to steal them. To make this possible, the action attribute must be updated. This action attribute specifies where the form data, that is, the username and password, should be sent once the form is submitted. The form is submitted as soon as the user has clicked on the "Login" button. Additionally, the content of the ID attribute must be deleted, otherwise the username and password will be encrypted.
 
-**Github-Abbildung 7**
+**index.html line 660**
 ![](images/action,post.png)
 
 After saving again, an almost fully functional phishing website has now been created. The self-created post method ensures that after the login button is pressed, a text file is created (in this case in VS code) in which the login credentials are listed as specified. Moreover, the code sets up that the user is redirected to the original Facebook website immediately after the login attempt.
